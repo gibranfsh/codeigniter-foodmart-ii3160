@@ -1,0 +1,120 @@
+CRITICAL - 2023-11-15 02:45:22 --> Undefined array key "the_day"
+in APPPATH\Views\foodmart.php on line 12.
+ 1 APPPATH\Views\foodmart.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "the_day"', 'C:\\CodeIgniter4-develop\\app\\Views\\foodmart.php', 12)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\CodeIgniter4-develop\\app\\Views\\foodmart.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('foodmart', [], true)
+ 5 APPPATH\Controllers\FoodmartController.php(14): view('foodmart')
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\FoodmartController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FoodmartController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\CodeIgniter4-develop\\public\\index.php')
+ERROR - 2023-11-15 02:46:03 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'foodmart' in C:\CodeIgniter4-develop\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 C:\CodeIgniter4-develop\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'foodmart', 3308, '', 0)
+#1 C:\CodeIgniter4-develop\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\CodeIgniter4-develop\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\CodeIgniter4-develop\system\Database\BaseBuilder.php(1612): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\CodeIgniter4-develop\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\CodeIgniter4-develop\system\BaseModel.php(623): CodeIgniter\Model->doFindAll(1000, 0)
+#6 C:\CodeIgniter4-develop\app\Models\Foodmart.php(12): CodeIgniter\BaseModel->findAll(1000)
+#7 C:\CodeIgniter4-develop\app\Controllers\FoodmartController.php(12): App\Models\Foodmart->getDataFoodmart()
+#8 C:\CodeIgniter4-develop\system\CodeIgniter.php(942): App\Controllers\FoodmartController->index()
+#9 C:\CodeIgniter4-develop\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FoodmartController))
+#10 C:\CodeIgniter4-develop\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\CodeIgniter4-develop\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\CodeIgniter4-develop\system\Commands\Server\rewrite.php(47): require_once('C:\\CodeIgniter4...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'foodmart' in C:\CodeIgniter4-develop\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\CodeIgniter4-develop\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\CodeIgniter4-develop\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\CodeIgniter4-develop\system\Database\BaseBuilder.php(1612): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\CodeIgniter4-develop\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\CodeIgniter4-develop\system\BaseModel.php(623): CodeIgniter\Model->doFindAll(1000, 0)
+#5 C:\CodeIgniter4-develop\app\Models\Foodmart.php(12): CodeIgniter\BaseModel->findAll(1000)
+#6 C:\CodeIgniter4-develop\app\Controllers\FoodmartController.php(12): App\Models\Foodmart->getDataFoodmart()
+#7 C:\CodeIgniter4-develop\system\CodeIgniter.php(942): App\Controllers\FoodmartController->index()
+#8 C:\CodeIgniter4-develop\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FoodmartController))
+#9 C:\CodeIgniter4-develop\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\CodeIgniter4-develop\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\CodeIgniter4-develop\system\Commands\Server\rewrite.php(47): require_once('C:\\CodeIgniter4...')
+#12 {main}
+CRITICAL - 2023-11-15 02:46:03 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'foodmart'
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1612): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `view_sales_fact_1997`
+ LIMIT 1000', [], false)
+ 3 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(623): CodeIgniter\Model->doFindAll(1000, 0)
+ 5 APPPATH\Models\Foodmart.php(12): CodeIgniter\BaseModel->findAll(1000)
+ 6 APPPATH\Controllers\FoodmartController.php(12): App\Models\Foodmart->getDataFoodmart()
+ 7 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\FoodmartController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FoodmartController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\CodeIgniter4-develop\\public\\index.php')
+ERROR - 2023-11-15 02:46:06 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'foodmart' in C:\CodeIgniter4-develop\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 C:\CodeIgniter4-develop\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'foodmart', 3308, '', 0)
+#1 C:\CodeIgniter4-develop\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\CodeIgniter4-develop\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\CodeIgniter4-develop\system\Database\BaseBuilder.php(1612): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\CodeIgniter4-develop\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\CodeIgniter4-develop\system\BaseModel.php(623): CodeIgniter\Model->doFindAll(1000, 0)
+#6 C:\CodeIgniter4-develop\app\Models\Foodmart.php(12): CodeIgniter\BaseModel->findAll(1000)
+#7 C:\CodeIgniter4-develop\app\Controllers\FoodmartController.php(12): App\Models\Foodmart->getDataFoodmart()
+#8 C:\CodeIgniter4-develop\system\CodeIgniter.php(942): App\Controllers\FoodmartController->index()
+#9 C:\CodeIgniter4-develop\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FoodmartController))
+#10 C:\CodeIgniter4-develop\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\CodeIgniter4-develop\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\CodeIgniter4-develop\system\Commands\Server\rewrite.php(47): require_once('C:\\CodeIgniter4...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'foodmart' in C:\CodeIgniter4-develop\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\CodeIgniter4-develop\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\CodeIgniter4-develop\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\CodeIgniter4-develop\system\Database\BaseBuilder.php(1612): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\CodeIgniter4-develop\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\CodeIgniter4-develop\system\BaseModel.php(623): CodeIgniter\Model->doFindAll(1000, 0)
+#5 C:\CodeIgniter4-develop\app\Models\Foodmart.php(12): CodeIgniter\BaseModel->findAll(1000)
+#6 C:\CodeIgniter4-develop\app\Controllers\FoodmartController.php(12): App\Models\Foodmart->getDataFoodmart()
+#7 C:\CodeIgniter4-develop\system\CodeIgniter.php(942): App\Controllers\FoodmartController->index()
+#8 C:\CodeIgniter4-develop\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FoodmartController))
+#9 C:\CodeIgniter4-develop\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\CodeIgniter4-develop\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\CodeIgniter4-develop\system\Commands\Server\rewrite.php(47): require_once('C:\\CodeIgniter4...')
+#12 {main}
+CRITICAL - 2023-11-15 02:46:06 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'foodmart'
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1612): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `view_sales_fact_1997`
+ LIMIT 1000', [], false)
+ 3 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(623): CodeIgniter\Model->doFindAll(1000, 0)
+ 5 APPPATH\Models\Foodmart.php(12): CodeIgniter\BaseModel->findAll(1000)
+ 6 APPPATH\Controllers\FoodmartController.php(12): App\Models\Foodmart->getDataFoodmart()
+ 7 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\FoodmartController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FoodmartController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\CodeIgniter4-develop\\public\\index.php')
+CRITICAL - 2023-11-15 02:46:16 --> Undefined array key "the_day"
+in APPPATH\Views\foodmart.php on line 12.
+ 1 APPPATH\Views\foodmart.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "the_day"', 'C:\\CodeIgniter4-develop\\app\\Views\\foodmart.php', 12)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\CodeIgniter4-develop\\app\\Views\\foodmart.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('foodmart', [], true)
+ 5 APPPATH\Controllers\FoodmartController.php(14): view('foodmart')
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\FoodmartController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FoodmartController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\CodeIgniter4-develop\\public\\index.php')
